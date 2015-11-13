@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Introduction | openWRT界面开发</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="&amp;emsp;&amp;emsp;在开始前， 需要对开发的背景有一定的了解，下面是openwrt和luCI的基本介绍：">
+        <meta name="generator" content="GitBook 1.0.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="./chapter1.html" />
+    
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="0" data-basepath="." data-revision="1433836790631">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter active" data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="chapter1.html">
+            
+                
+                    <a href="./chapter1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         搭建开发环境
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="1.1" data-path="openwrt.html">
+            
+                
+                    <a href="./openwrt.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         编译openWRT
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1.2" data-path="prepare.html">
+            
+                
+                    <a href="./prepare.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                         开发工具搭建
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="chapter2.html">
+            
+                
+                    <a href="./chapter2.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         系统文件结构
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="2.1" data-path="basic.html">
+            
+                
+                    <a href="./basic.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                         基本目录介绍
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2.2" data-path="xiaomi.html">
+            
+                
+                    <a href="./xiaomi.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                         小米目录
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="chapter3.html">
+            
+                
+                    <a href="./chapter3.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         请求流程
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="chapter4.html">
+            
+                
+                    <a href="./chapter4.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         WiFi连接设备数Demo
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >openWRT界面开发</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_1900">
+                    
+                        <h1 id="openwrt">openWRT界面开发</h1>
+<p>&emsp;&emsp;在开始前， 需要对开发的背景有一定的了解，下面是openwrt和luCI的基本介绍：</p>
+<p>&emsp;&emsp; openwrt的详细介绍可参考百科，这里总结一下，它就是一个附带很多软件包， 可以根据自己需求选择编译的linux系统。 对于刚开始开发，我们可能需要对http服务器， 或者luci进行一些配置，所以需要掌握一些基本的配置文件和linux命令；</p>
+<p>&emsp;&emsp; 至于luCI， 从网上你可能会了解到它是一种使用lua语言编写的MVC开发框架、一种可以快速配置路由器的接口、 一种专门用来写路由器界面的工具等， 这些都是从各个方面介绍的luCI， 即使看过后， 还是会有luCI到底是个什么东西的疑问。 其实对于前端，只需要把它理解为一种后台开发框架， 与其他任何语言的后台框架唯一不同的是， 它提供了一套配置路由器的接口。</p>
+<p>&emsp;&emsp;从http服务的角度看路由器的话， 关系结构如下，所以开发路由器配置的前端与普通的写法没有任何区别，可以使用任何前端技术。
+<img src="http://i1.tietuku.com/22617fc87b3309aa.png" alt="图片"></p>
+<p>&emsp;&emsp;备注：网络上很多关于luCI的介绍都是将很多逻辑写在了页面中， 对于入门者会造成很大误绕，那样只是一种写法，完全可以将所有后台逻辑写在后端，创建出更好维护的代码；</p>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://forum.openwrt.org/viewforum.php?id=11" target="_blank">openWRT forum</a></li>
+<li><a href="https://forestgump.me/2015/03/31/luci2/" target="_blank">LUCI和LUCI2对比</a></li>
+<li><a href="http://feppt.qiniudn.com/router.pdf" target="_blank">FE in 小米路由器</a></li>
+<li><a href="http://wiki.openwrt.org/doc/techref/luci" target="_blank">LuCI – Technical Reference</a></li>
+<li><a href="http://luci.subsignal.org/trac/wiki/Documentation" target="_blank">LuCI Documentation</a></li>
+<li><a href="http://wiki.openwrt.org/doc/techref/luci2" target="_blank">LuCI2 – OpenWrt web user interface</a></li>
+<li><a href="http://wiki.openwrt.org/doc/techref/ubus" target="_blank">ubus (OpenWrt micro bus architecture)</a></li>
+<li><a href="https://github.com/mkschreder/luci-express" target="_blank">基于LUCI2与angular的前端开发应用JUCI </a></li>
+<li><a href="http://lotors.me/2014/08/12/phpssh2openwrt/" target="_blank">利用PHP SSH2扩展实现远程控制Openwrt</a></li>
+<li><a href="http://www.cnblogs.com/gnuhpc/p/3293204.html" target="_blank">如何自定义一个配置文件的设置界面</a></li>
+<li><a href="http://www.cnblogs.com/mayswind/p/3468124.html" target="_blank">开发OpenWrt路由器上LuCI的模块</a></li>
+<li><a href="http://www.cnblogs.com/jzyuchen/p/3855528.html" target="_blank">为Luci添加自定义主题</a></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <a href="./chapter1.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 搭建开发环境"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
